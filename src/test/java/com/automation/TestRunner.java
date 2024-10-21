@@ -8,7 +8,11 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "com.automation.steps",
-        plugin = {"json:target/cucumber.json","io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"}
+        plugin = {
+                "json:target/cucumber.json",
+                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+        }
 )
 public class TestRunner {
 }
