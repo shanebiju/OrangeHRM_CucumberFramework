@@ -51,5 +51,6 @@ public class AdminSteps{
     @Then("delete the obtained user after search")
     public void deleteTheObtainedUserAfterSearch() {
         adminPage.deleteUser();
+        //Assert.fail("test case failed");
     }
 }

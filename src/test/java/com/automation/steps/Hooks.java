@@ -17,7 +17,8 @@ public class Hooks {
     @After
     public void cleanUp(Scenario scenario){
         if(scenario.isFailed()){
-            Allure.addAttachment("failed screenshot",DriverManager.takeSceenshotAsInputStream());
+            Allure.addAttachment("failed screenshot",DriverManager.takeScreenshotAsInputStream());
+            scenario.attach(DriverManager.takeScreenshotAsBytes(),"image/png","failed screenshot");
         }
         DriverManager.getDriver().quit();
     }

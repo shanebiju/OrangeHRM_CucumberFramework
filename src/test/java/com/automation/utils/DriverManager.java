@@ -21,8 +21,12 @@ public class DriverManager {
         return driver;
     }
 
-    public static InputStream takeSceenshotAsInputStream(){
+    public static InputStream takeScreenshotAsInputStream(){
         TakesScreenshot ts=(TakesScreenshot) DriverManager.getDriver();
         return new ByteArrayInputStream(ts.getScreenshotAs(OutputType.BYTES));
+    }
+    public static byte[] takeScreenshotAsBytes(){
+        TakesScreenshot ts=(TakesScreenshot) DriverManager.getDriver();
+        return ts.getScreenshotAs(OutputType.BYTES);
     }
 }
