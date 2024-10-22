@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Oct 21, 2024 11:41:15 am</span></a>
+<a href="#"><span class="badge badge-primary">Oct 22, 2024 07:24:59 pm</span></a>
 </li>
 </ul>
 </div>
@@ -45,6 +45,11 @@
 <li class="nav-item dropdown" onclick="toggleView('test-view')">
 <a id="nav-test" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
@@ -67,6 +72,7 @@
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -81,7 +87,7 @@
           <div class="test-detail">
             <p class="name">user can create new candidate</p>
             <p class="text-sm">
-              <span>11:41:16 am</span> / <span>00:00:26:783</span>
+              <span>7:25:00 pm</span> / <span>00:00:25:072</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -90,9 +96,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">user can create new candidate</h5>
-<span class='badge badge-success'>10.21.2024 11:41:16 am</span>
-<span class='badge badge-danger'>10.21.2024 11:41:43 am</span>
-<span class='badge badge-default'>00:00:26:783</span>
+<span class='badge badge-success'>10.22.2024 7:25:00 pm</span>
+<span class='badge badge-danger'>10.22.2024 7:25:25 pm</span>
+<span class='badge badge-default'>00:00:25:072</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -195,25 +201,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="21"
+        <li class="test-item"  status="fail" test-id="21"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">User can create new user</p>
             <p class="text-sm">
-              <span>11:41:43 am</span> / <span>00:00:26:718</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>7:25:25 pm</span> / <span>00:00:19:627</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">User can create new user</h5>
-<span class='badge badge-success'>10.21.2024 11:41:43 am</span>
-<span class='badge badge-danger'>10.21.2024 11:42:09 am</span>
-<span class='badge badge-default'>00:00:26:718</span>
+<h5 class="test-status text-fail">User can create new user</h5>
+<span class='badge badge-success'>10.22.2024 7:25:25 pm</span>
+<span class='badge badge-danger'>10.22.2024 7:25:45 pm</span>
+<span class='badge badge-default'>00:00:19:627</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=21</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -225,10 +231,10 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="22"><span class="badge log pass-bg mr-2">Pass</span>verify that user can create new user</div>
+        <div class="node" id="22"><span class="badge log fail-bg mr-2">Fail</span>verify that user can create new user</div>
       </div>
     </div>
-        <div class="collapse">
+        <div class="">
           <div class="card-body">
               <div class="step pass-bg" title="com.automation.steps.LoginSteps.user_open_website()">
                 <span>Given user open website</span>
@@ -300,9 +306,15 @@
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.automation.steps.AdminSteps.deleteTheObtainedUserAfterSearch()">
+              <div class="step fail-bg" title="com.automation.steps.AdminSteps.deleteTheObtainedUserAfterSearch()">
                 <span>Then delete the obtained user after search</span>
       <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: test case failed
+	at org.junit.Assert.fail(Assert.java:89)
+	at com.automation.steps.AdminSteps.deleteTheObtainedUserAfterSearch(AdminSteps.java:54)
+	at ✽.delete the obtained user after search(file:///C:/Users/sanja/IdeaProjects/OrangeHRM_Automation/src/test/resources/features/CreateNewUserTest.feature:17)
+</textarea>
+      
       </div>
               </div>
           </div>
@@ -318,7 +330,7 @@
           <div class="test-detail">
             <p class="name">user can login and logout</p>
             <p class="text-sm">
-              <span>11:42:09 am</span> / <span>00:00:13:622</span>
+              <span>7:25:45 pm</span> / <span>00:00:09:636</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -327,9 +339,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">user can login and logout</h5>
-<span class='badge badge-success'>10.21.2024 11:42:09 am</span>
-<span class='badge badge-danger'>10.21.2024 11:42:23 am</span>
-<span class='badge badge-default'>00:00:13:622</span>
+<span class='badge badge-success'>10.22.2024 7:25:45 pm</span>
+<span class='badge badge-danger'>10.22.2024 7:25:54 pm</span>
+<span class='badge badge-default'>00:00:09:636</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=40</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -396,30 +408,82 @@
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-<div class="container-fluid p-4 view dashboard-view">
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">java.lang.AssertionError</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.AssertionError</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:25:44 pm</td>
+<td>
+<a href="#" class="linked" test-id='21' id='38'>Then delete the obtained user after search</a>
+<div class="">
+<span class="badge badge-default">User can create new user.verify that user can create new user.Then delete the obtained user after search</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
 <div class="row">
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Oct 21, 2024 11:41:15 am</h3>
+<h3>Oct 22, 2024 07:24:59 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Oct 21, 2024 11:42:23 am</h3>
+<h3>Oct 22, 2024 07:25:55 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Features Passed</p>
-<h3>3</h3>
+<h3>2</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Features Failed</p>
-<h3>0</h3>
+<h3>1</h3>
 </div></div>
 </div>
 </div>
@@ -435,12 +499,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>3</b> features passed
+<div><small data-tooltip='66%'>
+<b>2</b> features passed
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> features failed,
+<small data-tooltip='33%'><b>1</b> features failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -458,9 +522,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>3</b> scenarios passed</small></div>
+<div><small data-tooltip='66%'><b>2</b> scenarios passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> scenarios failed,
+<small data-tooltip='33%'><b>1</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -478,9 +542,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>38</b> steps passed</small></div>
+<div><small data-tooltip='97%'><b>37</b> steps passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> steps failed,
+<small data-tooltip='2%'><b>1</b> steps failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -497,7 +561,7 @@
 </div></div>
 <script>
 var timeline = {
-"user can create new candidate":26.783,"User can create new user":26.718,"user can login and logout":13.622
+"user can create new candidate":25.072,"User can create new user":19.627,"user can login and logout":9.636
 };
 </script>
 <div class="row">
@@ -506,19 +570,19 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 3,
-failParent: 0,
+passParent: 2,
+failParent: 1,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 3,
-failChild: 0,
+passChild: 2,
+failChild: 1,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 38,
-failGrandChild: 0,
+passGrandChild: 37,
+failGrandChild: 1,
 warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
