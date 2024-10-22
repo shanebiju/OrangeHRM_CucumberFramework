@@ -11,7 +11,8 @@ import org.junit.runner.RunWith;
         plugin = {
                 "json:target/cucumber.json",
                 "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
-                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+                "html:target/cucumber-reports.html"
         }
 )
 public class TestRunner {
